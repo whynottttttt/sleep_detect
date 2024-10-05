@@ -128,7 +128,10 @@ while cap.isOpened():
   # print(state_l)
   # print(state_r)
   cv2.imshow('result', img)
-  cv2.waitKey(0)
+  # cv2.waitKey(0) # 정지된 화면 볼 때
 
   if cv2.waitKey(1) == ord('q'): # q 입력하면 프로그램 종료
     break
+
+cap.release()
+cv2.destroyAllWindows()
